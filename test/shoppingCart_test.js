@@ -9,6 +9,7 @@ it('Should create a new item with name and price', () => {
 });
 
 it('Should return an array containing all items in cart', () => {
+    // what do you mean "return" an array?
     let new_item_1 = new Item('apple', 0.99);
     let new_item_2 = new Item('orange', 0.79);
     let new_item_3 = new Item('pineapple', 1.99);
@@ -28,6 +29,7 @@ it('Should add a new item to the shopping cart', () => {
 });
 
 it('Should return the number of items in the cart', () => {
+    // you mention shopping and cart as if they are different.
     let new_item_1 = new Item('apple', 0.99);
     let new_item_2 = new Item('orange', 0.79);
     let new_item_3 = new Item('pineapple', 1.99);
@@ -39,6 +41,7 @@ it('Should return the number of items in the cart', () => {
 });
 
 it('Should remove items from cart', () => {
+    // Do not understand if remove all or just one item.
     let new_item_1 = new Item('apple', 0.99);
     let new_item_2 = new Item('orange', 0.79);
     let new_item_3 = new Item('pineapple', 1.99);
@@ -48,6 +51,14 @@ it('Should remove items from cart', () => {
 });
 
 // Stretch challenges
-// it('Should update the count of items in the cart');
-// it('Should remove an item when its count is 0');
-// it('Should return the total cost of all items in the cart');
+it('Should update the count of items in the cart', () => {
+
+});
+
+it('Should remove an item when its count is 0', () => {
+
+});
+
+it('Should return the total cost of all items in the cart', () =. {
+
+});

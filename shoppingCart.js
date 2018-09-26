@@ -37,6 +37,23 @@ class ShoppingCart {
         return this.cart = []
 
     }
+    get totalQty() {
+        let cart = this.cart;
+        let qty = 0
+        cart.forEach(function(item) {
+            qty += item.qty
+        });
+        return qty
+    }
+    get totalCost() {
+        let cart = this.cart;
+        let totalCost = 0
+        cart.map(function(item) {
+            let itemTotal = item.qty * item.cost
+            totalCost += itemTotal
+        });
+        return totalCost
+    }
 }
 // create a shoppingCart class
 
