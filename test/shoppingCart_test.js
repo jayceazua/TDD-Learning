@@ -52,13 +52,24 @@ it('Should remove items from cart', () => {
 
 // Stretch challenges
 it('Should update the count of items in the cart', () => {
-
+    // what do you mean the count of items in the cart?
+    // do you mean the qty of each item?
 });
 
 it('Should remove an item when its count is 0', () => {
-
+    // Do not understand if remove all or just one item.
+    let new_item_1 = new Item('apple', 0.99);
+    let new_item_2 = new Item('orange', 0.79);
+    let new_item_3 = new Item('pineapple', 1.99);
+    let shoppingCart = new ShoppingCart();
+    // method to remove 1 qty of a specific item
+    expect(shoppingCart.howManyItems).to.equal(2)
 });
 
 it('Should return the total cost of all items in the cart', () => {
-
+    let new_item_1 = new Item('milk', 5.00);
+    let new_item_2 = new Item('juice', 3.00);
+    let new_item_3 = new Item('bread', 1.00);
+    let shoppingCart = new ShoppingCart();
+    expect(shoppingCart.totalCost).to.equal(9.00)
 });
