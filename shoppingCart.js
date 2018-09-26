@@ -25,8 +25,7 @@ class ShoppingCart {
     };
 
     set addItem(Item) {
-        let cart = this.cart;
-        cart.push(Item);
+        this.cart.push(Item);
     }
 
     get howManyItems() {
@@ -38,29 +37,21 @@ class ShoppingCart {
 
     }
     get totalQty() {
-        let cart = this.cart;
         let qty = 0
-        cart.forEach(function(item) {
+        this.cart.forEach(function(item) {
             qty += item.qty
         });
         return qty
     }
     get totalCost() {
-        let cart = this.cart;
         let totalCost = 0
-        cart.map(function(item) {
+        this.cart.map(function(item) {
             let itemTotal = item.qty * item.cost
             totalCost += itemTotal
         });
         return totalCost
     }
 }
-// create a shoppingCart class
-
-
-    // removing an individual item
-    // removing all items
-    // return the amount of items total in the cart including the qty
 
 module.exports = {
     Item,
