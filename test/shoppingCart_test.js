@@ -59,6 +59,6 @@ it('Should remove an item when its count is 0', () => {
 
 });
 
-it('Should return the total cost of all items in the cart', () =. {
+it('Should return the total cost of all items in the cart', () => {
 
 });
