@@ -8,7 +8,7 @@ Test Driven Development Practice with Shopping Cart features.
 
 ### Technologies used:
 - JavaScript w/ AirBnB Style Guide
-- Node
-- Express
-- Mocha
-- Chai
+- Node v10.11.0
+- Express v4.16.3
+- Mocha v5.2.0
+- Chai v4.1.2
