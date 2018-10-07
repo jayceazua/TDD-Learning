@@ -38,7 +38,7 @@ class ShoppingCart {
     _findItem() {
         const cart = this.cart;
         // closure function
-        return function(_item) {
+        return (_item) => {
             for(let i = 0; i < cart.length; i += 1) {
                 if (_item.name === cart[i].name) { return true };
             };
