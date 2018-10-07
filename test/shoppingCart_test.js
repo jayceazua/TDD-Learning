@@ -86,6 +86,7 @@ it('Should remove an item when its count is 0', () => {
     shoppingCart.removeItem(new_item_1)
     shoppingCart.removeItem(new_item_1)
     expect(new_item_1.qty).to.equal(0)
+    expect(new_item_3.qty).to.equal(1)
     // method to remove 1 qty of a specific item
     expect(shoppingCart.howManyItems).to.equal(1)
 });
@@ -94,6 +95,11 @@ it('Should return the total cost of all items in the cart', () => {
     let new_item_1 = new Item('milk', 5.00);
     let new_item_2 = new Item('juice', 3.00);
     let new_item_3 = new Item('bread', 1.00);
+    let new_item_4 = new Item('juice', 3.00);
     let shoppingCart = new ShoppingCart();
-    expect(shoppingCart.totalCost).to.equal(9.00)
+    shoppingCart.addItem = new_item_1
+    shoppingCart.addItem = new_item_2
+    shoppingCart.addItem = new_item_3
+    shoppingCart.addItem = new_item_4
+    expect(shoppingCart.totalCost).to.equal(12.00)
 });

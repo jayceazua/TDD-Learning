@@ -14,23 +14,17 @@ class ShoppingCart {
 
     set addItem(_item) {
         const cart = this.cart;
-        if (this.howManyItems > 0) {
-            if (this.findItem()(_item)) {
-                cart.forEach((item) => {
-                    if(item.name === _item.name){
-                        item.qty += 1
-                    }
-                })
-                return
-            }
-            else {
-                cart.push(_item)
-            }
+        if (this._findItem()(_item)) {
+            // could be refactored into a function
+            cart.forEach((item) => {
+                if(item.name === _item.name){
+                    item.qty += 1
+                }
+            }); // <-- end of increasing
         }
         else {
             cart.push(_item)
         }
-
     };
 
     get howManyItems() {
@@ -41,46 +35,51 @@ class ShoppingCart {
         return this.cart = []
     };
 
-    findItem() {
+    _findItem() {
         const cart = this.cart;
         // closure function
         return function(_item) {
             for(let i = 0; i < cart.length; i += 1) {
-                if (_item.name === cart[i].name) {
-                    return true
-                }
+                if (_item.name === cart[i].name) { return true }
             }
             return false
         }
     };
     removeItem(_item) {
         const cart = this.cart;
-        if (this.findItem()(_item)) {
+        if (this._findItem()(_item)) {
+            // could be refactored into a function
             cart.forEach((item) => {
                 if(item.name === _item.name){
                     item.qty -= 1
-                    this.removeItemsWithZero()
+                    this._removeItemsWithZeroQty()
                 }
-            })
+            }); // <-- end of increasing
         }
         return
     }
-    removeItemsWithZero() {
+    _removeItemsWithZeroQty() {
         const cart = this.cart;
         cart.forEach((item) => {
             if(item.qty === 0) {
                 let itemToRemove = cart.indexOf(item)
                 cart.splice(itemToRemove, 1);
-                return
+                return;
             }
         })
     }
-    get totalQty() {};
-    get totalCost() {}
+    get totalCost() {
+        const cart = this.cart;
+        let _totalCost = 0
+        cart.forEach((item) => {
+            _totalCost += (item.price * item.qty)
+        })
+        return _totalCost;
+    }
 }
 
 
-// test
+// test to create _findItem getter
 let new_item_1 = new Item('apple', 0.99);
 let new_item_2 = new Item('orange', 0.79);
 let new_item_3 = new Item('pineapple', 1.99);
