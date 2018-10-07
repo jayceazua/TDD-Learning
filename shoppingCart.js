@@ -89,7 +89,6 @@ shoppingCart.addItem = new_item_1
 shoppingCart.addItem = new_item_2
 shoppingCart.addItem = new_item_3
 shoppingCart.addItem = new_item_4
-
 console.log(shoppingCart.cart)
 
 module.exports = {
