@@ -1,7 +1,7 @@
 # Learning TDD/ BDD
 ### *Backend Web 1_2*
 
-<img src="https://github.com/jayceazua/spaceman/blob/master/">
+<img src="https://github.com/jayceazua/TDD-Learning/blob/master/TDD_node.png">
 
 ### Description
 Test Driven Development Practice with Shopping Cart features.
