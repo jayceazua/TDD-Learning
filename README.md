@@ -6,9 +6,6 @@
 ### Description
 Test Driven Development Practice with Shopping Cart features.
 
-### To start
-``` $ python3 spaceman.py ```
-
 ### Technologies used:
 - JavaScript w/ AirBnB Style Guide
 - Node
