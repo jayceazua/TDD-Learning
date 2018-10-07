@@ -5,6 +5,7 @@
 
 ### Description
 Test Driven Development Practice with Shopping Cart features.
+Followed instructions from the [BEW1_2 Repo](https://github.com/Product-College-Courses/BEW-1.2-Authentication-and-Associations/tree/master/09-TDD)
 
 ### Technologies used:
 - JavaScript (ES6) w/ AirBnB Style Guide
